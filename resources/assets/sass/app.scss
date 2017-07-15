@@ -1,0 +1,43 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+[v-cloak] { display: none; }
+#droner-app {
+  margin-top:60px;
+}
+.navbar-brand {
+  padding: 8px 15px;
+}
+.navbar-brand > img {
+    display: inline;
+}
+.navbar-brand > p {
+    display: inline;
+    font-weight: 600;
+    font-size: 1.3em;
+    line-height: 1em;
+    vertical-align: middle;
+    color: #000;
+}
+.jumbotron {
+  height:450px;
+}
+.jumbotron-image {
+  background: url('/img/drone1.jpg') no-repeat fixed center;
+  background-color:#000;
+  opacity:0.7;
+}
+.jumbotron {
+  color:#000;
+}
+h1 > sup {
+  font-size: 14px;
+  top: -32px;
+}
