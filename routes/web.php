@@ -16,3 +16,4 @@ Route::get('/', 'PublicController@welcome');
 Auth::routes();
 
 Route::get('/console', 'ConsoleController@index')->name('console');
+
