@@ -29,6 +29,7 @@
   </div>
 </template>
 <script>
+    import axios from 'axios'; 
     export default {
         data: function() {
             return {
@@ -47,28 +48,29 @@
         
         methods: {
             fetchdroneList: function() {
-                this.$http.get('api/drones')
+                var self = this;
+                axios.get('api/drones')
                     .then(function (response) {
-                        this.list = response.data
+                        self.list = response.data
                 });
             },
  
             createDrone: function () {
-                this.$http.post('api/drone/store', this.drone)
+                axios.post('api/drone/store', this.drone)
                 this.drone.body = ''
                 this.edit = false
                 this.fetchdroneList()
             },
  
             updatedrone: function(id) {
-                this.$http.patch('api/drone/' + id, this.drone)
+                axios.patch('api/drone/' + id, this.drone)
                 this.drone.body = ''
                 this.edit = false
                 this.fetchDroneList()
             },
  
             showdrone: function(id) {
-                this.$http.get('api/drone/' + id)
+                axios.get('api/drone/' + id)
                     .then(function(response) {
                         this.drone.id   = response.data.id
                         this.drone.body = response.data.body
@@ -77,7 +79,7 @@
             },
  
             deletedrone: function (id) {
-                this.$http.delete('api/drones/' + id)
+                axios.delete('api/drones/' + id)
                 this.fetchDroneList()
             },
         }

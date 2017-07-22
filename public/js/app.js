@@ -11925,10 +11925,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import Dashboard from '../components/Dashboard.vue'
 // import NotFound from '../components/shared/NotFound.vue'
 var Dashboard = function Dashboard() {
-  return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 40));
+  return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 40));
 };
 var NotFound = function NotFound() {
-  return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 41));
+  return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 41));
 };
 var routes = [{ path: '/', component: Dashboard },
 // Route with sub route
