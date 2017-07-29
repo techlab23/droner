@@ -8,12 +8,20 @@
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+| 
 */
+
+// run php artisan route:list to see the list of routes in the console.
 
 Route::get('/', 'PublicController@welcome');
 
 Auth::routes();
 
 Route::get('/console', 'ConsoleController@index')->name('console');
+
+// Api group
+Route::prefix('api')->group(function() {
+    Route::resource('drones', 'DroneController');
+});
+
 

@@ -16,6 +16,8 @@ import router from './router/index'
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('drone-list', require('./components/DroneList.vue'));
+
 const app = new Vue({
     el: '#droner-app',
     mixins:[ dronerMixin ],

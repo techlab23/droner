@@ -31,7 +31,7 @@
             
             <div class="panel panel-default">
                 
-                <Drones></Drones>
+                <DroneList></DroneList>
                   
             </div><!-- end .col-md-8 -->
             
@@ -57,11 +57,11 @@
 
 </template>
 <script>
-  import Drones from './Drones.vue';
+  import DroneList from './DroneList.vue';
   export default {
     props:['user'],
     components: { 
-      Drones 
+      DroneList
     }
   }
 </script>

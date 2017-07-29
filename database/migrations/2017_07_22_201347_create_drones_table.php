@@ -15,6 +15,7 @@ class CreateDronesTable extends Migration
     {
         Schema::create('drones', function (Blueprint $table) {
             $table->increments('id');
+            $table->longtext('body');
             $table->timestamps();
         });
     }
