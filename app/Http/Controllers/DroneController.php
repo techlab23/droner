@@ -28,3 +28,9 @@ class DroneController extends Controller
         return 204;
     }
 }
+
+// Api group
+Route::prefix('api')->group(function() {
+    Route::resource('drones', 'DroneController');
+});
+

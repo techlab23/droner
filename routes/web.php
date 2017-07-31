@@ -19,9 +19,3 @@ Auth::routes();
 
 Route::get('/console', 'ConsoleController@index')->name('console');
 
-// Api group
-Route::prefix('api')->group(function() {
-    Route::resource('drones', 'DroneController');
-});
-
-
